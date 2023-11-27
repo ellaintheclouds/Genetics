@@ -6,9 +6,12 @@ data <- read.csv("class alleles.csv")
 colnames(data) <- c("A", "B")
 
 # Most and least common alleles
-names(which.min(table(data$A + data$B))) # 770
-names(which.max(table(data$A + data$B))) # 1122
-rowCounts(data, value = 449)
+
+names(which.min
+      (table(c(data$A, data$B)))
+      ) # These are not acceptable alleles: -448-  -450-  -459- 
+        #These are: 753  769  
+names(which.max(table(c(data$A, data$B)))) # 561
 
 
 # Me----------------------------------------------------------------------------
