@@ -1,5 +1,5 @@
-setwd("C:/Users/El Richardson/OneDrive - Lancaster University/Biomedicine
-      /Year 3/312 Medical Genetics/Coursework/Practical report")
+#setwd("C:/Users/El Richardson/OneDrive - Lancaster University/Biomedicine
+ #     /Year 3/312 Medical Genetics/Coursework/Practical report")
 data <- read.csv("class alleles.csv")
 
 # Class-------------------------------------------------------------------------
@@ -38,3 +38,7 @@ susallele2freq <- 12/110 # 0.1090909
 susgenotypefreq <- allele1freq*susallele2freq # 0.02380165
 (0.02380165)^-1 # 42.01389
 42.01389^2# 1765.167
+
+# Finding how many people in the class have the same genotype as the suspect
+data[data$A == "449" & data$B == "577",] # 1 occurance
+data[data$B == "449" & data$A == "577",] # 2 occurances
